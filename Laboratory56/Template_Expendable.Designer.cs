@@ -32,7 +32,6 @@ namespace Laboratory56
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.bEdit = new System.Windows.Forms.Button();
@@ -41,7 +40,6 @@ namespace Laboratory56
             this.inSotrudnik = new System.Windows.Forms.TextBox();
             this.inKolich_yedinitsa = new System.Windows.Forms.TextBox();
             this.inInventar = new System.Windows.Forms.TextBox();
-            this.inSklad = new System.Windows.Forms.TextBox();
             this.inDate = new System.Windows.Forms.TextBox();
             this.inId_raskhod_nakl = new System.Windows.Forms.TextBox();
             this.TableRaskhod_nakl = new System.Windows.Forms.DataGridView();
@@ -75,15 +73,6 @@ namespace Laboratory56
             this.label4.TabIndex = 29;
             this.label4.Text = "Inventar";
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(409, 123);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(35, 15);
-            this.label3.TabIndex = 28;
-            this.label3.Text = "Sklad";
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -110,6 +99,7 @@ namespace Laboratory56
             this.bEdit.TabIndex = 25;
             this.bEdit.Text = "Edit";
             this.bEdit.UseVisualStyleBackColor = true;
+            this.bEdit.Click += new System.EventHandler(this.bEdit_Click);
             // 
             // bDelete
             // 
@@ -119,6 +109,7 @@ namespace Laboratory56
             this.bDelete.TabIndex = 24;
             this.bDelete.Text = "Delete";
             this.bDelete.UseVisualStyleBackColor = true;
+            this.bDelete.Click += new System.EventHandler(this.bDelete_Click);
             // 
             // bNew
             // 
@@ -128,6 +119,7 @@ namespace Laboratory56
             this.bNew.TabIndex = 23;
             this.bNew.Text = "New";
             this.bNew.UseVisualStyleBackColor = true;
+            this.bNew.Click += new System.EventHandler(this.bNew_Click);
             // 
             // inSotrudnik
             // 
@@ -149,13 +141,6 @@ namespace Laboratory56
             this.inInventar.Name = "inInventar";
             this.inInventar.Size = new System.Drawing.Size(237, 23);
             this.inInventar.TabIndex = 20;
-            // 
-            // inSklad
-            // 
-            this.inSklad.Location = new System.Drawing.Point(511, 120);
-            this.inSklad.Name = "inSklad";
-            this.inSklad.Size = new System.Drawing.Size(237, 23);
-            this.inSklad.TabIndex = 19;
             // 
             // inDate
             // 
@@ -188,7 +173,6 @@ namespace Laboratory56
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.bEdit);
@@ -197,7 +181,6 @@ namespace Laboratory56
             this.Controls.Add(this.inSotrudnik);
             this.Controls.Add(this.inKolich_yedinitsa);
             this.Controls.Add(this.inInventar);
-            this.Controls.Add(this.inSklad);
             this.Controls.Add(this.inDate);
             this.Controls.Add(this.inId_raskhod_nakl);
             this.Controls.Add(this.TableRaskhod_nakl);
@@ -214,7 +197,6 @@ namespace Laboratory56
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button bEdit;
@@ -223,7 +205,6 @@ namespace Laboratory56
         private System.Windows.Forms.TextBox inSotrudnik;
         private System.Windows.Forms.TextBox inKolich_yedinitsa;
         private System.Windows.Forms.TextBox inInventar;
-        private System.Windows.Forms.TextBox inSklad;
         private System.Windows.Forms.TextBox inDate;
         private System.Windows.Forms.TextBox inId_raskhod_nakl;
         private System.Windows.Forms.DataGridView TableRaskhod_nakl;

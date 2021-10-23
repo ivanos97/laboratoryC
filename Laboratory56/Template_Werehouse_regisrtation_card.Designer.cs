@@ -38,13 +38,13 @@ namespace Laboratory56
             this.bEdit = new System.Windows.Forms.Button();
             this.bDelete = new System.Windows.Forms.Button();
             this.bNew = new System.Windows.Forms.Button();
-            this.inRaskhod_nakl = new System.Windows.Forms.TextBox();
             this.inKolich_yedinitsa = new System.Windows.Forms.TextBox();
             this.inInventar = new System.Windows.Forms.TextBox();
             this.inType_inventar = new System.Windows.Forms.TextBox();
             this.inPriem_nakl = new System.Windows.Forms.TextBox();
             this.inId_karta_ucheta = new System.Windows.Forms.TextBox();
             this.TableKarta_ucheta = new System.Windows.Forms.DataGridView();
+            this.inRaskhod_nakl = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.TableKarta_ucheta)).BeginInit();
             this.SuspendLayout();
             // 
@@ -110,6 +110,7 @@ namespace Laboratory56
             this.bEdit.TabIndex = 25;
             this.bEdit.Text = "Edit";
             this.bEdit.UseVisualStyleBackColor = true;
+            this.bEdit.Click += new System.EventHandler(this.bEdit_Click);
             // 
             // bDelete
             // 
@@ -119,6 +120,7 @@ namespace Laboratory56
             this.bDelete.TabIndex = 24;
             this.bDelete.Text = "Delete";
             this.bDelete.UseVisualStyleBackColor = true;
+            this.bDelete.Click += new System.EventHandler(this.bDelete_Click);
             // 
             // bNew
             // 
@@ -128,13 +130,7 @@ namespace Laboratory56
             this.bNew.TabIndex = 23;
             this.bNew.Text = "New";
             this.bNew.UseVisualStyleBackColor = true;
-            // 
-            // inRaskhod_nakl
-            // 
-            this.inRaskhod_nakl.Location = new System.Drawing.Point(511, 256);
-            this.inRaskhod_nakl.Name = "inRaskhod_nakl";
-            this.inRaskhod_nakl.Size = new System.Drawing.Size(237, 23);
-            this.inRaskhod_nakl.TabIndex = 22;
+            this.bNew.Click += new System.EventHandler(this.bNew_Click);
             // 
             // inKolich_yedinitsa
             // 
@@ -180,11 +176,20 @@ namespace Laboratory56
             this.TableKarta_ucheta.Size = new System.Drawing.Size(378, 328);
             this.TableKarta_ucheta.TabIndex = 16;
             // 
+            // inRaskhod_nakl
+            // 
+            this.inRaskhod_nakl.FormattingEnabled = true;
+            this.inRaskhod_nakl.Location = new System.Drawing.Point(511, 250);
+            this.inRaskhod_nakl.Name = "inRaskhod_nakl";
+            this.inRaskhod_nakl.Size = new System.Drawing.Size(237, 23);
+            this.inRaskhod_nakl.TabIndex = 32;
+            // 
             // Template_Werehouse_regisrtation_card
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(768, 370);
+            this.Controls.Add(this.inRaskhod_nakl);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -194,7 +199,6 @@ namespace Laboratory56
             this.Controls.Add(this.bEdit);
             this.Controls.Add(this.bDelete);
             this.Controls.Add(this.bNew);
-            this.Controls.Add(this.inRaskhod_nakl);
             this.Controls.Add(this.inKolich_yedinitsa);
             this.Controls.Add(this.inInventar);
             this.Controls.Add(this.inType_inventar);
@@ -220,12 +224,12 @@ namespace Laboratory56
         private System.Windows.Forms.Button bEdit;
         private System.Windows.Forms.Button bDelete;
         private System.Windows.Forms.Button bNew;
-        private System.Windows.Forms.TextBox inRaskhod_nakl;
         private System.Windows.Forms.TextBox inKolich_yedinitsa;
         private System.Windows.Forms.TextBox inInventar;
         private System.Windows.Forms.TextBox inType_inventar;
         private System.Windows.Forms.TextBox inPriem_nakl;
         private System.Windows.Forms.TextBox inId_karta_ucheta;
         private System.Windows.Forms.DataGridView TableKarta_ucheta;
+        private System.Windows.Forms.ComboBox inRaskhod_nakl;
     }
 }

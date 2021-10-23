@@ -77,6 +77,7 @@ namespace Laboratory56
             this.bEdit.TabIndex = 41;
             this.bEdit.Text = "Edit";
             this.bEdit.UseVisualStyleBackColor = true;
+            this.bEdit.Click += new System.EventHandler(this.bEdit_Click);
             // 
             // bDelete
             // 
@@ -86,6 +87,7 @@ namespace Laboratory56
             this.bDelete.TabIndex = 40;
             this.bDelete.Text = "Delete";
             this.bDelete.UseVisualStyleBackColor = true;
+            this.bDelete.Click += new System.EventHandler(this.bDelete_Click);
             // 
             // bNew
             // 
@@ -95,6 +97,7 @@ namespace Laboratory56
             this.bNew.TabIndex = 39;
             this.bNew.Text = "New";
             this.bNew.UseVisualStyleBackColor = true;
+            this.bNew.Click += new System.EventHandler(this.bNew_Click);
             // 
             // inNum_phone_sklad
             // 

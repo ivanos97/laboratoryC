@@ -44,6 +44,7 @@ namespace Laboratory56
             this.bLogin.TabIndex = 0;
             this.bLogin.Text = "Login";
             this.bLogin.UseVisualStyleBackColor = true;
+            this.bLogin.Click += new System.EventHandler(this.bLogin_Click);
             // 
             // inLogin
             // 

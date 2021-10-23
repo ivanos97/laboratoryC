@@ -47,6 +47,7 @@ namespace Laboratory56
             this.bAcc.TabIndex = 0;
             this.bAcc.Text = "Accaunt";
             this.bAcc.UseVisualStyleBackColor = true;
+            this.bAcc.Click += new System.EventHandler(this.bAcc_Click);
             // 
             // bBack
             // 
@@ -56,6 +57,7 @@ namespace Laboratory56
             this.bBack.TabIndex = 1;
             this.bBack.Text = "Backups";
             this.bBack.UseVisualStyleBackColor = true;
+            this.bBack.Click += new System.EventHandler(this.bBack_Click);
             // 
             // bRaskhod
             // 
@@ -65,6 +67,7 @@ namespace Laboratory56
             this.bRaskhod.TabIndex = 2;
             this.bRaskhod.Text = "Raskhod";
             this.bRaskhod.UseVisualStyleBackColor = true;
+            this.bRaskhod.Click += new System.EventHandler(this.bRaskhod_Click);
             // 
             // bMove
             // 
@@ -74,6 +77,7 @@ namespace Laboratory56
             this.bMove.TabIndex = 3;
             this.bMove.Text = "Movement";
             this.bMove.UseVisualStyleBackColor = true;
+            this.bMove.Click += new System.EventHandler(this.bMove_Click);
             // 
             // bOrder
             // 
@@ -83,6 +87,7 @@ namespace Laboratory56
             this.bOrder.TabIndex = 4;
             this.bOrder.Text = "Zayavka";
             this.bOrder.UseVisualStyleBackColor = true;
+            this.bOrder.Click += new System.EventHandler(this.bOrder_Click);
             // 
             // bPriem
             // 
@@ -92,6 +97,7 @@ namespace Laboratory56
             this.bPriem.TabIndex = 5;
             this.bPriem.Text = "Priem";
             this.bPriem.UseVisualStyleBackColor = true;
+            this.bPriem.Click += new System.EventHandler(this.bPriem_Click);
             // 
             // bSklad
             // 
@@ -101,6 +107,7 @@ namespace Laboratory56
             this.bSklad.TabIndex = 6;
             this.bSklad.Text = "Sklad";
             this.bSklad.UseVisualStyleBackColor = true;
+            this.bSklad.Click += new System.EventHandler(this.bSklad_Click);
             // 
             // bCard
             // 
@@ -110,6 +117,7 @@ namespace Laboratory56
             this.bCard.TabIndex = 7;
             this.bCard.Text = "Card";
             this.bCard.UseVisualStyleBackColor = true;
+            this.bCard.Click += new System.EventHandler(this.bCard_Click);
             // 
             // Template_Controller
             // 

@@ -32,11 +32,10 @@ namespace Laboratory56
             this.TableMovement = new System.Windows.Forms.DataGridView();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.bEdit = new System.Windows.Forms.Button();
             this.bDelete = new System.Windows.Forms.Button();
             this.bNew = new System.Windows.Forms.Button();
-            this.inRaskhod_nakl = new System.Windows.Forms.TextBox();
-            this.inPriem_Nakl = new System.Windows.Forms.TextBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.TableMovement)).BeginInit();
             this.SuspendLayout();
             // 
@@ -67,15 +66,6 @@ namespace Laboratory56
             this.label1.TabIndex = 29;
             this.label1.Text = "Priem_Nakl";
             // 
-            // bEdit
-            // 
-            this.bEdit.Location = new System.Drawing.Point(680, 326);
-            this.bEdit.Name = "bEdit";
-            this.bEdit.Size = new System.Drawing.Size(75, 23);
-            this.bEdit.TabIndex = 28;
-            this.bEdit.Text = "Edit";
-            this.bEdit.UseVisualStyleBackColor = true;
-            // 
             // bDelete
             // 
             this.bDelete.Location = new System.Drawing.Point(599, 326);
@@ -84,6 +74,7 @@ namespace Laboratory56
             this.bDelete.TabIndex = 27;
             this.bDelete.Text = "Delete";
             this.bDelete.UseVisualStyleBackColor = true;
+            this.bDelete.Click += new System.EventHandler(this.bDelete_Click);
             // 
             // bNew
             // 
@@ -93,34 +84,36 @@ namespace Laboratory56
             this.bNew.TabIndex = 26;
             this.bNew.Text = "New";
             this.bNew.UseVisualStyleBackColor = true;
+            this.bNew.Click += new System.EventHandler(this.bNew_Click);
             // 
-            // inRaskhod_nakl
+            // comboBox1
             // 
-            this.inRaskhod_nakl.Location = new System.Drawing.Point(518, 84);
-            this.inRaskhod_nakl.Name = "inRaskhod_nakl";
-            this.inRaskhod_nakl.Size = new System.Drawing.Size(237, 23);
-            this.inRaskhod_nakl.TabIndex = 24;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(518, 39);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(237, 23);
+            this.comboBox1.TabIndex = 33;
             // 
-            // inPriem_Nakl
+            // comboBox2
             // 
-            this.inPriem_Nakl.Location = new System.Drawing.Point(518, 39);
-            this.inPriem_Nakl.Name = "inPriem_Nakl";
-            this.inPriem_Nakl.Size = new System.Drawing.Size(237, 23);
-            this.inPriem_Nakl.TabIndex = 23;
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Location = new System.Drawing.Point(518, 87);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(237, 23);
+            this.comboBox2.TabIndex = 34;
             // 
             // Template_Movement
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(775, 364);
+            this.Controls.Add(this.comboBox2);
+            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.TableMovement);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.bEdit);
             this.Controls.Add(this.bDelete);
             this.Controls.Add(this.bNew);
-            this.Controls.Add(this.inRaskhod_nakl);
-            this.Controls.Add(this.inPriem_Nakl);
             this.Name = "Template_Movement";
             this.Text = "Template_Movement";
             ((System.ComponentModel.ISupportInitialize)(this.TableMovement)).EndInit();
@@ -134,10 +127,9 @@ namespace Laboratory56
         private System.Windows.Forms.DataGridView TableMovement;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button bEdit;
         private System.Windows.Forms.Button bDelete;
         private System.Windows.Forms.Button bNew;
-        private System.Windows.Forms.TextBox inRaskhod_nakl;
-        private System.Windows.Forms.TextBox inPriem_Nakl;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox comboBox2;
     }
 }

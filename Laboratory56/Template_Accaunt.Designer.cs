@@ -77,6 +77,7 @@ namespace Laboratory56
             this.bEdit.TabIndex = 18;
             this.bEdit.Text = "Edit";
             this.bEdit.UseVisualStyleBackColor = true;
+            this.bEdit.Click += new System.EventHandler(this.bEdit_Click);
             // 
             // bDelete
             // 
@@ -86,6 +87,7 @@ namespace Laboratory56
             this.bDelete.TabIndex = 17;
             this.bDelete.Text = "Delete";
             this.bDelete.UseVisualStyleBackColor = true;
+            this.bDelete.Click += new System.EventHandler(this.bDelete_Click);
             // 
             // bNew
             // 
@@ -95,6 +97,7 @@ namespace Laboratory56
             this.bNew.TabIndex = 16;
             this.bNew.Text = "New";
             this.bNew.UseVisualStyleBackColor = true;
+            this.bNew.Click += new System.EventHandler(this.bNew_Click);
             // 
             // inPassword
             // 
@@ -122,6 +125,7 @@ namespace Laboratory56
             this.TableAccaunt.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.TableAccaunt.Location = new System.Drawing.Point(21, 24);
             this.TableAccaunt.Name = "TableAccaunt";
+            this.TableAccaunt.ReadOnly = true;
             this.TableAccaunt.RowTemplate.Height = 25;
             this.TableAccaunt.Size = new System.Drawing.Size(378, 328);
             this.TableAccaunt.TabIndex = 22;
