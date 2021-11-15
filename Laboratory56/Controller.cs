@@ -40,6 +40,7 @@ namespace Laboratory56
             connection.Close();
             return dataSet.Tables[0];
         }
+
         public static void UpdateDatabase(string text)
         {
             MySqlConnection connection = ConnectToDb();
@@ -47,8 +48,15 @@ namespace Laboratory56
             command.CommandText = text;
             command.Connection = connection;
             connection.Open();
-            command.ExecuteNonQuery();
-            connection.Close();
+            try 
+            { 
+                command.ExecuteNonQuery();
+            }
+            catch
+            {
+                Console.Error.Write("Error");
+            }
+    connection.Close();
         }
 
         public static List<string> GetAllId(string text = "")
@@ -79,6 +87,38 @@ namespace Laboratory56
             return mas;
         }
 
+        public static System.Data.DataTable gotAllWhEFromNomerSklad(string last_sklad)
+        {
+            return ConnectionDataBase($"SELECT * FROM `warehouse_has_extendable` where Warehouse_Nomer_sklad = '{last_sklad}'");
+        }
+        public static System.Data.DataTable gotAllWhEFromRashodNakl(string rashod)
+        {
+            return ConnectionDataBase($"SELECT * FROM `warehouse_has_extendable` where Extendable_id_raskhod_nakl = '{rashod}'");
+        }
+        public static void grossButtonNewWhE(string name_sklad, string rashod_nakl)
+        {
+            UpdateDatabase($"insert into warehouse_has_extendable (Warehouse_Nomer_sklad, Extendable_id_raskhod_nakl) value ('{name_sklad}', '{rashod_nakl}')");
+        }
+        public static void grossButtonDelWhE(string name_sklad, string rashod_nakl)
+        {
+            UpdateDatabase($"delete from warehouse_has_extendable where Warehouse_Nomer_sklad = '{name_sklad}' and Extendable_id_raskhod_nakl = '{rashod_nakl}'");
+        }
+        public static System.Data.DataTable gotAllWhRFromPriemNakl(string v)
+        {
+            return ConnectionDataBase($"SELECT * FROM `warehouse_has_reception` where Reception_id_priem_nakl = '{v}'"); 
+        }
+        public static System.Data.DataTable gotAllWhRFromNomerSklad(string v)
+        {
+            return ConnectionDataBase($"SELECT * FROM `warehouse_has_reception` where Warehouse_Nomer_sklad = '{v}'");
+        }
+        public static void grossButtonNewWhR(string name_sklad, string priem_nakl)
+        {
+            UpdateDatabase($"insert into warehouse_has_reception (Warehouse_Nomer_sklad, Reception_id_priem_nakl) value ('{name_sklad}', '{priem_nakl}')");
+        }
+        public static void grossButtonDelWhR(string name_sklad, string priem_nakl)
+        {
+            UpdateDatabase($"delete from warehouse_has_reception where Warehouse_Nomer_sklad = '{name_sklad}' and Reception_id_priem_nakl = '{priem_nakl}'");
+        }
         public static System.Data.DataTable gotAllSklad()
         {
             return ConnectionDataBase("select * from warehouse");

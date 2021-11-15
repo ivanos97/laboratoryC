@@ -43,7 +43,15 @@ namespace Laboratory56
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
+            this.tableWarehouse_has_Reception = new System.Windows.Forms.DataGridView();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.idPriem_nakl_sec = new System.Windows.Forms.TextBox();
+            this.idNomer_sklad_sec = new System.Windows.Forms.TextBox();
+            this.bDelWhR = new System.Windows.Forms.Button();
+            this.bNewWhR = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.TablePriem_nakl)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tableWarehouse_has_Reception)).BeginInit();
             this.SuspendLayout();
             // 
             // TablePriem_nakl
@@ -165,11 +173,79 @@ namespace Laboratory56
             this.label6.TabIndex = 15;
             this.label6.Text = "Sotrudnik";
             // 
+            // tableWarehouse_has_Reception
+            // 
+            this.tableWarehouse_has_Reception.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.tableWarehouse_has_Reception.Location = new System.Drawing.Point(32, 439);
+            this.tableWarehouse_has_Reception.Name = "tableWarehouse_has_Reception";
+            this.tableWarehouse_has_Reception.RowTemplate.Height = 25;
+            this.tableWarehouse_has_Reception.Size = new System.Drawing.Size(378, 150);
+            this.tableWarehouse_has_Reception.TabIndex = 16;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(429, 487);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(65, 15);
+            this.label3.TabIndex = 20;
+            this.label3.Text = "Priem_nakl";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(429, 442);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(76, 15);
+            this.label7.TabIndex = 19;
+            this.label7.Text = "Nomer_sklad";
+            // 
+            // idPriem_nakl_sec
+            // 
+            this.idPriem_nakl_sec.Location = new System.Drawing.Point(531, 484);
+            this.idPriem_nakl_sec.Name = "idPriem_nakl_sec";
+            this.idPriem_nakl_sec.Size = new System.Drawing.Size(237, 23);
+            this.idPriem_nakl_sec.TabIndex = 18;
+            // 
+            // idNomer_sklad_sec
+            // 
+            this.idNomer_sklad_sec.Location = new System.Drawing.Point(531, 439);
+            this.idNomer_sklad_sec.Name = "idNomer_sklad_sec";
+            this.idNomer_sklad_sec.Size = new System.Drawing.Size(237, 23);
+            this.idNomer_sklad_sec.TabIndex = 17;
+            // 
+            // bDelWhR
+            // 
+            this.bDelWhR.Location = new System.Drawing.Point(612, 566);
+            this.bDelWhR.Name = "bDelWhR";
+            this.bDelWhR.Size = new System.Drawing.Size(75, 23);
+            this.bDelWhR.TabIndex = 22;
+            this.bDelWhR.Text = "Delete";
+            this.bDelWhR.UseVisualStyleBackColor = true;
+            this.bDelWhR.Click += new System.EventHandler(this.bDelWhR_Click);
+            // 
+            // bNewWhR
+            // 
+            this.bNewWhR.Location = new System.Drawing.Point(531, 566);
+            this.bNewWhR.Name = "bNewWhR";
+            this.bNewWhR.Size = new System.Drawing.Size(75, 23);
+            this.bNewWhR.TabIndex = 21;
+            this.bNewWhR.Text = "New";
+            this.bNewWhR.UseVisualStyleBackColor = true;
+            this.bNewWhR.Click += new System.EventHandler(this.bNewWhR_Click);
+            // 
             // Template_Reception
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 385);
+            this.ClientSize = new System.Drawing.Size(800, 637);
+            this.Controls.Add(this.bDelWhR);
+            this.Controls.Add(this.bNewWhR);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.idPriem_nakl_sec);
+            this.Controls.Add(this.idNomer_sklad_sec);
+            this.Controls.Add(this.tableWarehouse_has_Reception);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -187,6 +263,7 @@ namespace Laboratory56
             this.Name = "Template_Reception";
             this.Text = "Template_Reception";
             ((System.ComponentModel.ISupportInitialize)(this.TablePriem_nakl)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tableWarehouse_has_Reception)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -208,5 +285,12 @@ namespace Laboratory56
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.DataGridView tableWarehouse_has_Reception;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox idPriem_nakl_sec;
+        private System.Windows.Forms.TextBox idNomer_sklad_sec;
+        private System.Windows.Forms.Button bDelWhR;
+        private System.Windows.Forms.Button bNewWhR;
     }
 }

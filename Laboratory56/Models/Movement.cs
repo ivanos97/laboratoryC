@@ -8,10 +8,10 @@ namespace Laboratory56.Models
 {
     class Movement
     {
-        public string Priem_nakl { get => Priem_nakl; set => Priem_nakl = value; }
-        public string Raskhod_nakl { get => Raskhod_nakl; set => Raskhod_nakl = value; }
+        public Reception Priem_nakl { get => Priem_nakl; set => Priem_nakl = value; }
+        public Expendable Raskhod_nakl { get => Raskhod_nakl; set => Raskhod_nakl = value; }
 
-        public Movement(string priem_nakl, string raskhod_nakl)
+        public Movement(Reception priem_nakl, Expendable raskhod_nakl)
         {
             Priem_nakl = priem_nakl;
             Raskhod_nakl = raskhod_nakl;
@@ -19,8 +19,8 @@ namespace Laboratory56.Models
 
         public Movement()
         {
-            Priem_nakl = "";
-            Raskhod_nakl = "";
+            Priem_nakl = new Reception();
+            Raskhod_nakl = new Expendable();
         }
     }
 }

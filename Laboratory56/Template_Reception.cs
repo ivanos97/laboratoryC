@@ -12,6 +12,7 @@ namespace Laboratory56
 {
     public partial class Template_Reception : Form
     {
+        private string last_nakl = "0";
         public Template_Reception()
         {
             InitializeComponent();
@@ -21,13 +22,29 @@ namespace Laboratory56
         private void TableAccaunt_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             int row = e.RowIndex;
+            if (row < 0)
+            {
+                row = 0;
+            }
+            last_nakl = TablePriem_nakl.Rows[row].Cells[0].Value.ToString();
             inId_priem_nakl.Text = TablePriem_nakl.Rows[row].Cells[0].Value.ToString();
             inDate.Text = TablePriem_nakl.Rows[row].Cells[1].Value.ToString();
             inInventar.Text = TablePriem_nakl.Rows[row].Cells[2].Value.ToString();
             inKolich_yedinitsa.Text = TablePriem_nakl.Rows[row].Cells[3].Value.ToString();
             inSotrudnik.Text = TablePriem_nakl.Rows[row].Cells[4].Value.ToString();
+            tableWarehouse_has_Reception.DataSource = Controller.gotAllWhRFromPriemNakl(last_nakl);
+            tableWarehouse_has_Reception.CellClick += tableWarehouse_has_Reception_CellClick;
         }
-
+        private void tableWarehouse_has_Reception_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int row = e.RowIndex;
+            if (row < 0)
+            {
+                row = 0;
+            }
+            idNomer_sklad_sec.Text = tableWarehouse_has_Reception.Rows[row].Cells[0].Value.ToString();
+            idPriem_nakl_sec.Text = tableWarehouse_has_Reception.Rows[row].Cells[1].Value.ToString();
+        }
         private void bNew_Click(object sender, EventArgs e)
         {
             Controller.grossButtonNewPriem_nakl(inDate.Text, inInventar.Text, inKolich_yedinitsa.Text, inSotrudnik.Text);
@@ -44,6 +61,18 @@ namespace Laboratory56
         {
             Controller.grossButtonUpdatePriem_nakl(inId_priem_nakl.Text, inDate.Text, inInventar.Text, inKolich_yedinitsa.Text, inSotrudnik.Text);
             TablePriem_nakl.DataSource = Controller.gotAllPriem_nakl();
+        }
+
+        private void bNewWhR_Click(object sender, EventArgs e)
+        {
+            Controller.grossButtonNewWhR(idNomer_sklad_sec.Text, idPriem_nakl_sec.Text);
+            tableWarehouse_has_Reception.DataSource = Controller.gotAllWhRFromPriemNakl(last_nakl);
+        }
+
+        private void bDelWhR_Click(object sender, EventArgs e)
+        {
+            Controller.grossButtonDelWhR(idNomer_sklad_sec.Text, idPriem_nakl_sec.Text);
+            tableWarehouse_has_Reception.DataSource = Controller.gotAllWhRFromPriemNakl(last_nakl);
         }
     }
 }

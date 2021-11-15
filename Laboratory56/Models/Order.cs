@@ -12,9 +12,9 @@ namespace Laboratory56.Models
         public string Invantar { get => Invantar; set => Invantar = value; }
         public string Type_inventar { get => Type_inventar; set => Type_inventar = value; }
         public int Kolich_yedinitsa { get => Kolich_yedinitsa; set => Kolich_yedinitsa = value; }
-        public string Sklad { get => Sklad; set => Sklad = value; }
+        public Warehouse Sklad { get => Sklad; set => Sklad = value; }
 
-        public Order(int id_zayavka, string invantar, string type_inventar, int kolich_yedinitsa, string sklad)
+        public Order(int id_zayavka, string invantar, string type_inventar, int kolich_yedinitsa, Warehouse sklad)
         {
             Id_zayavka = id_zayavka;
             Invantar = invantar;
@@ -29,7 +29,7 @@ namespace Laboratory56.Models
             Invantar = "";
             Type_inventar = "";
             Kolich_yedinitsa = 0;
-            Sklad = "";
+            Sklad = new Warehouse();
         }
     }
 }
