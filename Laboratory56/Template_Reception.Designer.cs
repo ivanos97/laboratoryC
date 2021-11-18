@@ -50,6 +50,8 @@ namespace Laboratory56
             this.idNomer_sklad_sec = new System.Windows.Forms.TextBox();
             this.bDelWhR = new System.Windows.Forms.Button();
             this.bNewWhR = new System.Windows.Forms.Button();
+            this.label8 = new System.Windows.Forms.Label();
+            this.inSklad = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.TablePriem_nakl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tableWarehouse_has_Reception)).BeginInit();
             this.SuspendLayout();
@@ -234,11 +236,30 @@ namespace Laboratory56
             this.bNewWhR.UseVisualStyleBackColor = true;
             this.bNewWhR.Click += new System.EventHandler(this.bNewWhR_Click);
             // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(429, 142);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(35, 15);
+            this.label8.TabIndex = 24;
+            this.label8.Text = "Sklad";
+            // 
+            // inSklad
+            // 
+            this.inSklad.FormattingEnabled = true;
+            this.inSklad.Location = new System.Drawing.Point(531, 139);
+            this.inSklad.Name = "inSklad";
+            this.inSklad.Size = new System.Drawing.Size(237, 23);
+            this.inSklad.TabIndex = 25;
+            // 
             // Template_Reception
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 637);
+            this.Controls.Add(this.inSklad);
+            this.Controls.Add(this.label8);
             this.Controls.Add(this.bDelWhR);
             this.Controls.Add(this.bNewWhR);
             this.Controls.Add(this.label3);
@@ -292,5 +313,7 @@ namespace Laboratory56
         private System.Windows.Forms.TextBox idNomer_sklad_sec;
         private System.Windows.Forms.Button bDelWhR;
         private System.Windows.Forms.Button bNewWhR;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.ComboBox inSklad;
     }
 }

@@ -50,6 +50,8 @@ namespace Laboratory56
             this.idRashod_nakl = new System.Windows.Forms.TextBox();
             this.idNomer_sklad_thi = new System.Windows.Forms.TextBox();
             this.tableWarehouse_has_Extendable = new System.Windows.Forms.DataGridView();
+            this.label8 = new System.Windows.Forms.Label();
+            this.inSklad = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.TableRaskhod_nakl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tableWarehouse_has_Extendable)).BeginInit();
             this.SuspendLayout();
@@ -234,11 +236,30 @@ namespace Laboratory56
             this.tableWarehouse_has_Extendable.Size = new System.Drawing.Size(378, 150);
             this.tableWarehouse_has_Extendable.TabIndex = 59;
             // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(409, 125);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(35, 15);
+            this.label8.TabIndex = 67;
+            this.label8.Text = "Sklad";
+            // 
+            // inSklad
+            // 
+            this.inSklad.FormattingEnabled = true;
+            this.inSklad.Location = new System.Drawing.Point(511, 122);
+            this.inSklad.Name = "inSklad";
+            this.inSklad.Size = new System.Drawing.Size(237, 23);
+            this.inSklad.TabIndex = 68;
+            // 
             // Template_Expendable
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(764, 565);
+            this.Controls.Add(this.inSklad);
+            this.Controls.Add(this.label8);
             this.Controls.Add(this.bDelWhE);
             this.Controls.Add(this.bNewWhE);
             this.Controls.Add(this.label3);
@@ -292,5 +313,7 @@ namespace Laboratory56
         private System.Windows.Forms.TextBox idRashod_nakl;
         private System.Windows.Forms.TextBox idNomer_sklad_thi;
         private System.Windows.Forms.DataGridView tableWarehouse_has_Extendable;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.ComboBox inSklad;
     }
 }

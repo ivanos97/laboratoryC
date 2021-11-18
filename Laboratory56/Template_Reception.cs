@@ -27,12 +27,18 @@ namespace Laboratory56
                 row = 0;
             }
             last_nakl = TablePriem_nakl.Rows[row].Cells[0].Value.ToString();
+            tableWarehouse_has_Reception.DataSource = Controller.gotAllWhRFromPriemNakl(last_nakl);
             inId_priem_nakl.Text = TablePriem_nakl.Rows[row].Cells[0].Value.ToString();
             inDate.Text = TablePriem_nakl.Rows[row].Cells[1].Value.ToString();
+            inSklad.Items.Clear();
+            for (int i = 0; i < tableWarehouse_has_Reception.Rows.Count-1; i++)
+            {
+                inSklad.Items.Add(tableWarehouse_has_Reception.Rows[i].Cells[0].Value.ToString());
+            }
+            inSklad.SelectedIndex = 0;
             inInventar.Text = TablePriem_nakl.Rows[row].Cells[2].Value.ToString();
             inKolich_yedinitsa.Text = TablePriem_nakl.Rows[row].Cells[3].Value.ToString();
             inSotrudnik.Text = TablePriem_nakl.Rows[row].Cells[4].Value.ToString();
-            tableWarehouse_has_Reception.DataSource = Controller.gotAllWhRFromPriemNakl(last_nakl);
             tableWarehouse_has_Reception.CellClick += tableWarehouse_has_Reception_CellClick;
         }
         private void tableWarehouse_has_Reception_CellClick(object sender, DataGridViewCellEventArgs e)

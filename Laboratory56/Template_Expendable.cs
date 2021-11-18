@@ -26,13 +26,20 @@ namespace Laboratory56
             {
                 row = 0;
             }
+            last_rashod = TableRaskhod_nakl.Rows[row].Cells[0].Value.ToString();
+            tableWarehouse_has_Extendable.DataSource = Controller.gotAllWhEFromRashodNakl(last_rashod);
             inId_raskhod_nakl.Text = TableRaskhod_nakl.Rows[row].Cells[0].Value.ToString();
             inDate.Text = TableRaskhod_nakl.Rows[row].Cells[1].Value.ToString();
-            
+            inSklad.Items.Clear();
+            for (int i = 0; i < tableWarehouse_has_Extendable.Rows.Count - 1; i++)
+            {
+                inSklad.Items.Add(tableWarehouse_has_Extendable.Rows[i].Cells[0].Value.ToString());
+            }
+            inSklad.SelectedIndex = 0;
             inInventar.Text = TableRaskhod_nakl.Rows[row].Cells[2].Value.ToString();
             inKolich_yedinitsa.Text = TableRaskhod_nakl.Rows[row].Cells[3].Value.ToString();
             inSotrudnik.Text = TableRaskhod_nakl.Rows[row].Cells[4].Value.ToString();
-            tableWarehouse_has_Extendable.DataSource = Controller.gotAllWhEFromRashodNakl(last_rashod);
+
             tableWarehouse_has_Extendable.CellClick += tableWarehouse_has_Extendable_CellClick;
         }
 
